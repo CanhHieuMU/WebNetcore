@@ -1,0 +1,62 @@
+﻿<!-- =============================================== -->
+<!-- Left side column. contains the sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-home"></i> <span>Trang Chủ</span>
+                </a>
+            </li>
+            <li class="treeview active menu-open">
+                <a href="#">
+                    <i class="fa fa-table"></i> <span>Quản lí dữ liệu</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/Admin/Supplier"><i class="fa fa-circle-o"> Nhà cung cấp</i> </a></li>
+                    <li><a href="~/Admin/Category"><i class="fa fa-circle-o"> Loại hàng </i></a></li>
+                    <li><a href="~/Admin/Customer"><i class="fa fa-circle-o"> Khách hàng</i> </a></li>
+                    <li><a href="~/Admin/Shipper"><i class="fa fa-circle-o"> Người giao hàng</i> </a></li>
+                    <li><a href="~/Admin/Employee"><i class="fa fa-circle-o"> Nhân viên</i> </a></li>
+                    <li><a href="~/Admin/Product"><i class="fa fa-circle-o"> Mặt hàng</i> </a></li>
+                </ul>
+            </li>
+            <li class="treeview active menu-open">
+                <a href="">
+                    <i class="fa fa-table"></i> <span> Quản lí đơn hàng</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/Admin/Order"><i class="fa fa-circle-o"> Xử lý đơn hàng</i> </a></li>
+                    <li><a href="~/Admin/Order/Create"><i class="fa fa-circle-o"> Lập đơn hàng</i></a></li>
+                </ul>
+            </li>
+            
+            @*<li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>*@
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

@@ -1,0 +1,110 @@
+﻿@model SV20T1080063.WebMVC.Models.PaginationSearchCustomer
+@{
+    Layout = null;
+}
+<p style="margin: 10px 0 10px 0;">
+    Có <strong>@string.Format("{0:N0}", Model.RowCount)</strong> khách hàng.
+    Hiện đang ở trang <strong>@Model.Page</strong>
+    trên tổng số <strong>@Model.PageCount</strong> trang.
+</p>
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-warning">
+        <p>@ViewBag.ErrorMessage</p>
+    </div>
+}
+
+<div class="table-reponsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr class="bg-primary">
+                <th>Họ và Tên</th>
+                <th>Tên giao dịch</th>
+                <th>Tỉnh</th>
+                <th>Địa chỉ</th>
+                <th>Số điện thoại</th>
+                <th>Email</th>
+                <th style="width:100px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Data)
+            {
+                <tr>
+                    <td>@item.CustomerName</td>
+                    <td>@item.ContactName</td>
+                    <td>@item.Province</td>
+                    <td>@item.Address</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Email</td>
+                    <td class="text-right">
+                        <a href="~/Admin/Customer/Edit/@item.CustomerID" class="btn btn-xs btn-info">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a href="~/Admin/Customer/ChangePass/@item.CustomerID" class="btn btn-xs btn-warning">
+                            <i class="fa fa-key"></i>
+                        </a>
+                        <a href="~/Admin/Customer/Delete/@item.CustomerID" class="btn btn-xs btn-danger">
+                            <i class="fa fa-remove"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@{
+    int startPage = Math.Max(Model.Page - 2, 1);
+    int endPage = Math.Min(Model.Page + 2, Model.PageCount);
+
+    if (startPage == 1)
+    {
+        endPage = startPage + 3;
+    }
+    else if (endPage == Model.PageCount)
+    {
+        startPage = endPage - 3;
+    }
+}
+
+@if (Model.PageCount > 1)
+{
+    <div class="text-center">
+        <ul class="pagination">
+            @if (Model.Page > 1)
+            {
+                <li><a href="javascript:;" onclick="doSearch(@(Model.SearchValue))"><i class="fa fa-angle-double-left"></i></a></li>
+                <li><a href="javascript:;" onclick="doSearch(@(@Model.Page - 1))"><i class="fa fa-angle-left"></i></a></li>
+                if (Model.Page > 3)
+                {
+                    <li><a href="#" style="pointer-events: none">...</a></li>
+                }
+            }
+
+            @for (int i = startPage; i <= endPage; i++)
+            {
+                if (i == Model.Page)
+                {
+
+                    <li class="active"><a href="#">@i</a></li>
+                }
+                else
+                {
+                    <li><a href="javascript:;" onclick="doSearch(@i)">@i</a></li>
+                }
+            }
+
+            @if (Model.Page < Model.PageCount)
+            {
+                if (Model.Page < Model.PageCount - 2)
+                {
+                    <li><a href="#" style="pointer-events: none">...</a></li>
+                }
+                <li><a href="javascript:;" onclick="doSearch(@(Model.Page + 1))"><i class="fa fa-angle-right"></i></a></li>
+                <li><a href="javascript:;" onclick="doSearch(@(Model.PageCount))"><i class="fa fa-angle-double-right"></i></a></li>
+            }
+        </ul>
+    </div>
+}

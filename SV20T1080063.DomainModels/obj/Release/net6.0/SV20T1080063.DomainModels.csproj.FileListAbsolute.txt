@@ -1,0 +1,12 @@
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\bin\Release\net6.0\SV20T1080063.DomainModels.deps.json
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\bin\Release\net6.0\SV20T1080063.DomainModels.dll
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\bin\Release\net6.0\SV20T1080063.DomainModels.pdb
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\obj\Release\net6.0\SV20T1080063.DomainModels.csproj.AssemblyReference.cache
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\obj\Release\net6.0\SV20T1080063.DomainModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\obj\Release\net6.0\SV20T1080063.DomainModels.AssemblyInfoInputs.cache
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\obj\Release\net6.0\SV20T1080063.DomainModels.AssemblyInfo.cs
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\obj\Release\net6.0\SV20T1080063.DomainModels.csproj.CoreCompileInputs.cache
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\obj\Release\net6.0\SV20T1080063.DomainModels.dll
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\obj\Release\net6.0\refint\SV20T1080063.DomainModels.dll
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\obj\Release\net6.0\SV20T1080063.DomainModels.pdb
+D:\MVC\SV20T1080063\SV20T1080063.DomainModels\obj\Release\net6.0\ref\SV20T1080063.DomainModels.dll

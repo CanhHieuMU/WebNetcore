@@ -1,0 +1,58 @@
+﻿@using SV20T1080063.WebMVC
+@model SV20T1080063.DomainModels.Shipper
+@{
+
+}
+<div class="box box-danger">
+    <div class="box-header">
+        <h3 class="box-title">Nhập thông tin</h3>
+    </div>
+    <div class="box-body">
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="alert alert-warning">
+                <p>@ViewBag.ErrorMessage</p>
+            </div>
+        }
+
+        <form method="post" action="~/Admin/Shipper/Save">
+            @Html.HiddenFor(m => m.ShipperID)
+        <!-- Nhập tên -->
+        <div class="form-group">
+            <label>Tên người giao hàng</label>
+
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-clipboard"></i>
+                </div>
+                    @Html.TextBoxFor(m => m.ShipperName, new { @class="form-control", @autofocus="autoforcus", @placeholder="Nhập tên người giao hàng"})
+                    @Html.ValidationMessageFor(m => m.ShipperName,"" , new{@style="color:#f00"})
+            </div>
+        </div>
+        <!-- Nhập mô tả -->
+        <div class="form-group">
+            <label>Số điện thoại</label>
+
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-phone"></i>
+                </div>
+                    @Html.TextBoxFor(m => m.Phone, new { @class="form-control", @placeholder="Nhập số điện thoại"})
+                    @Html.ValidationMessageFor(m => m.Phone,"" , new{@style="color:#f00"})
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            <i class="fa fa-save"></i>
+            Lưu dữ liệu
+        </button>
+        <a href="~/Admin/Shipper" class="btn btn-danger">
+            Quay lại
+        </a>
+
+        <!-- /.box-body -->
+        </form>
+    </div>
+</div>
+
+

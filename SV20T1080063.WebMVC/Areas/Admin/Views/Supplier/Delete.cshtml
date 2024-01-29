@@ -1,0 +1,55 @@
+﻿@model SV20T1080063.DomainModels.Supplier
+@{
+    ViewBag.Title = "Xóa nhà cung cấp";
+}
+
+<div class="box box-danger">
+    <div class="box-body">
+        <form action="~/Admin/Customer/Delete/@Model.SupplierID" method="post">
+        <!-- Nhập tên -->
+        <div class="form-group">
+            <label>Tên nhà cung cấp</label>
+            <p class="form-control-static">@Model.SupplierName</p>
+            <label>Tên liên hệ</label>
+                <p class="form-control-static" style="border-bottom: solid gray 1px;">@Model.ContactName</p>
+        </div>
+
+        <!-- Số điện thoại -->
+        <div class="form-group">
+            <label>Số điện thoại:</label>
+                <p class="form-control-static" style="border-bottom: solid gray 1px;">@Model.Phone</p>
+            
+        </div>
+
+        <!-- Địa chỉ -->
+        <div class="form-group">
+            <label>Địa chỉ</label>
+                <p class="form-control-static" style="border-bottom: solid gray 1px;">@Model.Address</p>
+        </div>
+
+        <!-- Tỉnh thành -->
+        <div class="form-group">
+            <label>Tỉnh thành:</label>
+                <p class="form-control-static" style="border-bottom: solid gray 1px;">@Model.Provice</p>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label>Email</label>
+                <p class="form-control-static" style="border-bottom: solid gray 1px;">@Model.Email</p>
+        </div>
+
+        <button type="submit" class="btn btn-danger">
+            <i class="fa fa-remove"></i>
+            Xóa dữ liệu
+        </button>
+        <a href="~/Admin/Supplier/Index" class="btn btn-primary">
+            Quay lại
+        </a>
+
+        <!-- /.box-body -->
+        </form>
+    </div>
+</div>
+
+

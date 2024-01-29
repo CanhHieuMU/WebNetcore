@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "path": "SV20T1080063.sln",
+    "projects": [
+      "SV20T1080063.BusinessLayers\\SV20T1080063.BusinessLayers.csproj",
+      "SV20T1080063.DataLayers\\SV20T1080063.DataLayers.csproj",
+      "SV20T1080063.DomainModels\\SV20T1080063.DomainModels.csproj",
+      "SV20T1080063.WebMVC\\SV20T1080063.WebMVC.csproj"
+    ]
+  }
+}
